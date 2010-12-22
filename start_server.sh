@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo node server.js > /dev/null &
+sudo node server.js &

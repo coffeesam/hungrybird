@@ -59,5 +59,6 @@ Server.prototype = {
 
 var server = new Server();
 server.run();
+console.log("Hungrybird server started.");
 
 

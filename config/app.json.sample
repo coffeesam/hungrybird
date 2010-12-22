@@ -12,6 +12,6 @@
   "enableLiveFeed"  : true,
   "liveFeedPort"    : 8000,
 
-  "capistrano"      : { "repository"       :   "git://github.com/coffeesam/Hungrybird.git",
+  "capistrano"      : { "repository"       : "git://github.com/coffeesam/Hungrybird.git",
                          "hungrybird_host" : "hungrybird.yourdomain.com" }
 }
