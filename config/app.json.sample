@@ -1,0 +1,18 @@
+{
+  "name"             : "Hungrybird",
+
+  "tracking_port"    : 80,
+  "dashboard_port"   : 8080,
+  "live_feed_port"   : 8000,
+  "node_workers"     : 10,
+  "node_worker_id"   : 1001,
+
+  "mongo_host"       : "localhost",
+  "mongo_port"       : 27017,
+
+  "enable_livefeed" : true,
+
+  "capistrano"       : { "repository"       :   "git://github.com/coffeesam/Hungrybird.git",
+                         "hungrybird_host"  :   "hungrybird.yourdomain.com" }
+
+}

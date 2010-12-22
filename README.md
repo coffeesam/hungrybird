@@ -18,6 +18,7 @@ Requirements
  * node.js v0.2.0
  * npm v0.2.4
  * mongodb
+ * multi-node (included in source, will use npm to manage as a package later)
 
 
 Installation
