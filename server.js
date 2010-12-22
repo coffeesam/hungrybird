@@ -40,6 +40,7 @@ Server.prototype = {
             hungrybird.handleError(req, res, e);
           }
         });
+
         server.maxConnections = config.maxConnections;
         server.once('connection', function (stream) {
           process.setuid(config.workerUid);
@@ -49,16 +50,17 @@ Server.prototype = {
                 port         : config.trackingPort,
                 nodes        : config.workerPoolSize,
                 masterListen : false
-            }, server);
-      });
+        }, server);
 
+        if(nodes.isMaster) {
+          console.log("Hungrybird server started.");
+        }
+      });
     });
   }
-
 };
 
 var server = new Server();
 server.run();
-console.log("Hungrybird server started.");
 
 
