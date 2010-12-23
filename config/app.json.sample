@@ -4,10 +4,10 @@
   "mongoPort"       : 27017,
 
   "trackingPort"    : 80,
-  "maxConnections"  : 3000,
+  "maxConnections"  : 2000,
   "dashboardPort"   : 8080,
-  "workerPoolSize"  : 10,
-  "workerUid"       : 501,
+  "workerPoolSize"  : 4,
+  "workerUser"      : "hungrybird",
 
   "enableLiveFeed"  : true,
   "liveFeedPort"    : 8000,

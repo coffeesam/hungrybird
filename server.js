@@ -42,10 +42,6 @@ Server.prototype = {
         });
 
         server.maxConnections = config.maxConnections;
-        server.once('connection', function (stream) {
-          process.setuid(config.workerUid);
-        });
-
         var nodes = require("multi-node").listen({
                 port         : config.trackingPort,
                 nodes        : config.workerPoolSize,
@@ -54,6 +50,8 @@ Server.prototype = {
 
         if(nodes.isMaster) {
           console.log("Hungrybird server started.");
+        }else {
+          process.setuid(config.workerUser);
         }
       });
     });
