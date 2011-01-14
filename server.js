@@ -35,9 +35,9 @@ Server.prototype = {
       hungrybird.init(db, function() {
         var server = http.createServer(function(req, res) {
           try {
-            process.stdout.write(".");
+						if(config.debugMode) { process.stdout.write('.'); }
             hungrybird.serveRequest(req, res);
-            process.stdout.write("*");
+						if(config.debugMode) { process.stdout.write('*'); }
           } catch(e) {
             hungrybird.handleError(req, res, e);
           }
