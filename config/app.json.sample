@@ -3,6 +3,7 @@
   "mongoHost"       : "localhost",
   "mongoPort"       : 27017,
 
+  "trackerHost"     : "yourdomain.com",
   "trackingPort"    : 80,
   "maxConnections"  : 2000,
   "dashboardPort"   : 8080,
