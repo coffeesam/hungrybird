@@ -16,15 +16,15 @@ Server.prototype = {
 
   run: function() {
 
-    var http = require('http'),
-        static = require('node-static'),
-        io = require('socket.io'),
-        mongo = require('mongodb'),
-        Hungrybird = require('hungrybird').Hungrybird;
+    var http        = require('http'),
+        static      = require('node-static'),
+        io          = require('socket.io'),
+        mongo       = require('mongodb'),
+        Hungrybird  = require('hungrybird').Hungrybird;
 
     var config = this.config;
 
-    db = new mongo.Db(config.mongoDBName, new mongo.Server(config.mongoHost, config.mongoPort, {}), {});
+    db = new mongo.Db(config.mongoDbName, new mongo.Server(config.mongoHost, config.mongoPort, {}), {nativeParser : true});
 
     db.addListener("error", function(error) {
       console.log("Error connecting to mongo -- perhaps it isn't running?");
@@ -35,9 +35,9 @@ Server.prototype = {
       hungrybird.init(db, function() {
         var server = http.createServer(function(req, res) {
           try {
-						if(config.debugMode) { process.stdout.write('.'); }
+            if(config.debugMode) { process.stdout.write('.'); }
             hungrybird.serveRequest(req, res);
-						if(config.debugMode) { process.stdout.write('*'); }
+            if(config.debugMode) { process.stdout.write('*'); }
           } catch(e) {
             hungrybird.handleError(req, res, e);
           }
