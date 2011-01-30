@@ -1,9 +1,13 @@
 {
-  "mongoDBName"     : "Hungrybird",
+  "mongoDbName"     : "Hungrybird",
   "mongoHost"       : "localhost",
   "mongoPort"       : 27017,
 
-  "trackerHost"     : "yourdomain.com",
+  "maxDbSize"       : 3072000000,
+  "maxDbRecords"    : 3000000,
+
+  "domainHost"      : "yourdomain.com",
+
   "trackingPort"    : 80,
   "maxConnections"  : 2000,
   "dashboardPort"   : 8080,
@@ -16,5 +20,5 @@
   "debugMode"       : false,
 
   "capistrano"      : { "repository"       : "git://github.com/coffeesam/Hungrybird.git",
-                         "hungrybird_host" : "hungrybird.yourdomain.com" }
+                        "hungrybird_host" : "hungrybird.yourdomain.com" }
 }
