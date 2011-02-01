@@ -37,5 +37,5 @@ puts "Done with Upload"
 # Delete
 cmd = "cd #{backup_dir}; sudo rm -rf #{today.to_s}; sudo rm -rf #{backup_tgz}"
 puts cmd
-# system(cmd)
+system(cmd)
 puts "Done with Delete"
