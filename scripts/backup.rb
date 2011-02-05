@@ -1,9 +1,11 @@
 require 'date'
 
-yesterday           = Date.today - 1
+# command line arg should be in "YYYY-MM-DD" format
+today = ARGV[0].nil? ? Date.today : Date.parse(ARGV[0])
+
+yesterday           = today - 1
 yesterday_timestamp = "#{yesterday.to_time.to_i}000"
 
-today               = Date.today
 today_timestamp     = "#{today.to_time.to_i}000"
 
 backup_dir = "/mnt/dump/"
