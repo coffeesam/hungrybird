@@ -1,5 +1,6 @@
 require 'date'
 
+# note: ruby timezone is UTC
 # command line arg should be in "YYYY-MM-DD" format
 today = ARGV[0].nil? ? Date.today : Date.parse(ARGV[0])
 
