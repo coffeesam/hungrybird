@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo killall node &
+sudo pkill node &
